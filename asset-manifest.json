@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/patients/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/patients/static/js/main.30e7e9f7.chunk.js",
-    "main.js.map": "/patients/static/js/main.30e7e9f7.chunk.js.map",
+    "main.js": "/patients/static/js/main.2b890f80.chunk.js",
+    "main.js.map": "/patients/static/js/main.2b890f80.chunk.js.map",
     "runtime-main.js": "/patients/static/js/runtime-main.666e24b0.js",
     "runtime-main.js.map": "/patients/static/js/runtime-main.666e24b0.js.map",
-    "static/js/2.4d199519.chunk.js": "/patients/static/js/2.4d199519.chunk.js",
-    "static/js/2.4d199519.chunk.js.map": "/patients/static/js/2.4d199519.chunk.js.map",
+    "static/js/2.86fca6ec.chunk.js": "/patients/static/js/2.86fca6ec.chunk.js",
+    "static/js/2.86fca6ec.chunk.js.map": "/patients/static/js/2.86fca6ec.chunk.js.map",
     "static/js/3.271073d6.chunk.js": "/patients/static/js/3.271073d6.chunk.js",
     "static/js/3.271073d6.chunk.js.map": "/patients/static/js/3.271073d6.chunk.js.map",
     "index.html": "/patients/index.html",
     "static/css/main.ab7136cd.chunk.css.map": "/patients/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.4d199519.chunk.js.LICENSE.txt": "/patients/static/js/2.4d199519.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/patients/static/media/logo.6ce24c58.svg"
+    "static/js/2.86fca6ec.chunk.js.LICENSE.txt": "/patients/static/js/2.86fca6ec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.666e24b0.js",
-    "static/js/2.4d199519.chunk.js",
+    "static/js/2.86fca6ec.chunk.js",
     "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.30e7e9f7.chunk.js"
+    "static/js/main.2b890f80.chunk.js"
   ]
 }
