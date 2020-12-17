@@ -1,13 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch, Route, withRouter} from 'react-router-dom';
+import Home from './pages/home/Home'
+import NotFound from './pages/not-found/notFound'
+import Physician from './pages/physician/Physician'
+import Visits from './pages/visits/Visits'
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-     Added file structure
-    </div>
-  );
+  <div className='App'>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/not-found' component={NotFound} />
+      <Route exact path='/:Patientid/visits' component={Visits} />
+      <Route exact path='/physicians/:Physicianid' component={Physician} />
+    </Switch>
+  </div>)
 }
 
-export default App;
+export default withRouter(App);
