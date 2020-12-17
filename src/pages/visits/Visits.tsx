@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect, Link, useParams, useHistory } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 interface Visit{  
     id: string,
     patientId: string,
@@ -19,22 +19,19 @@ const Visits: React.FC = () => {
   ferrumVisitssAPI: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/patients/${id.Patientid}/visits`
     
   useEffect(() => {
-      fetchData();
+    fetch(ferrumVisitssAPI)
+    .then(response => response.json())
+    .then(data => setVisits(data))
+    .catch((error) => console.log(error));
     }, [ferrumVisitssAPI])
   
-  function fetchData() {
-      fetch(ferrumVisitssAPI)
-          .then(response => response.json())
-          .then(data => setVisits(data))
-          .catch((error) => console.log(error));
-    }
     return (
     <div >
         <h1>Visits Page</h1>
         {
         visits.map((visit) => 
-        <div>
-        <p>{visit.id}, {visit.patientId}, {visit.physicianId}, 
+        <div key={visit.id}>
+        <p >{visit.id}, {visit.patientId}, {visit.physicianId}, 
         {visit.time}, {visit.location}, {visit.symptoms}, {visit.diagnosis} </p>
         <p><Link to={`/physicians/${visit.physicianId}`}>Look at phycisian</Link></p>
         </div> 
