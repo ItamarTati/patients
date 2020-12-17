@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     Welcome to my App
+     Added file structure
     </div>
   );
 }
