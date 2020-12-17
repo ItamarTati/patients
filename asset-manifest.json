@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/patients/static/css/main.77718522.chunk.css",
-    "main.js": "/patients/static/js/main.5e6ec92f.chunk.js",
-    "main.js.map": "/patients/static/js/main.5e6ec92f.chunk.js.map",
+    "main.js": "/patients/static/js/main.6cfa69db.chunk.js",
+    "main.js.map": "/patients/static/js/main.6cfa69db.chunk.js.map",
     "runtime-main.js": "/patients/static/js/runtime-main.0adf52e5.js",
     "runtime-main.js.map": "/patients/static/js/runtime-main.0adf52e5.js.map",
     "static/js/2.34dfa79b.chunk.js": "/patients/static/js/2.34dfa79b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0adf52e5.js",
     "static/js/2.34dfa79b.chunk.js",
     "static/css/main.77718522.chunk.css",
-    "static/js/main.5e6ec92f.chunk.js"
+    "static/js/main.6cfa69db.chunk.js"
   ]
 }
