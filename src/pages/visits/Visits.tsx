@@ -10,16 +10,18 @@ interface Visit{
     symptoms: string,
     diagnosis: string
 }
-interface id{
-  Patientid: string
+interface Patient{
+  patientID: string
+  firstName: string
+  lastName: string
 }
 
 const Visits: React.FC = () => {
-  const id: id = useParams()
+  const patient: Patient = useParams()
   const [visits, setVisits] = useState<Visit[]>([]),
   [loading, setLoading] =  useState<boolean>(true),
   [requestWorked, setRequestWorked] =  useState<boolean>(true),
-  ferrumVisitssAPI: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/patients/${id.Patientid}/visits`
+  ferrumVisitssAPI: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/patients/${patient.patientID}/visits`
     
   useEffect(() => {
     fetch(ferrumVisitssAPI)
@@ -38,7 +40,7 @@ const Visits: React.FC = () => {
       else{
     return (
     <div >
-        <h1>Visits Page</h1>        
+        <h1>{patient.firstName} {patient.lastName}'s visits</h1>        
         {
         visits.map((visit) => 
         <div key={visit.id}>

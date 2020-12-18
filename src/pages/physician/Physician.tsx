@@ -8,16 +8,16 @@ interface PhysicianInfo{
     lastName: string,
     phone: string
 }
-interface id{
-  Physicianid: string
+interface PhysicianID{
+  physicianID: string
 }
 
 const Physician: React.FC = () => {
-  const id: id = useParams()
+  const physicianID: PhysicianID = useParams()
   const [physician, setPhysician] = useState<Partial<PhysicianInfo>>({}),
   [loading, setLoading] =  useState<boolean>(true),
   [requestWorked, setRequestWorked] =  useState<boolean>(true), 
-  physicianInfoApi: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/physicians/${id.Physicianid}`
+  physicianInfoApi: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/physicians/${physicianID.physicianID}`
   useEffect(() => {
     fetch(physicianInfoApi)
         .then(response => response.json())

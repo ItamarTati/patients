@@ -23,7 +23,7 @@ table {
     text-align: left;
   }
   tr:hover td {
-    background: #e6e6e6;
+    background: #e6e6e6; 
   }
   @media only screen and (max-width: 900px) {
     thead {

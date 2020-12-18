@@ -12,8 +12,8 @@ const App: React.FC = () => {
     <Switch>
       <Route exact path='/patients' component={Home} />
       <Route exact path='/patients/not-found' component={NotFound} />
-      <Route exact path='/patients/:Patientid' component={Visits} />
-      <Route exact path='/patients/physicians/:Physicianid' component={Physician} />
+      <Route exact path='/patients/:patientID/:firstName/:lastName' component={Visits} />
+      <Route exact path='/patients/physicians/:physicianID' component={Physician} />
     </Switch>
   </div>)
 }
