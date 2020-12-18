@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import classes from './Loading.module.css';
 
-const Loading: React.FC = () => {
+const  Loading: React.FC = () => {
     return (
-    <div >
-        <h1>Loading</h1>
-
-    </div>)
+        <div className={classes.Loading}>
+            <div className={classes.Loader} />
+            <p>Jusr Wait a Short Amount</p>
+        </div>
+    )
 }
+
 export default Loading
