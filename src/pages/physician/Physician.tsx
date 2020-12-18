@@ -26,7 +26,7 @@ const Physician: React.FC = () => {
         .catch((error) => setRequestWorked(false));
   }, [physicianInfoApi]);
   if(requestWorked === false){
-    return <Redirect to='/not-found' />
+    return <Redirect to='/patients/not-found' />
   } else{
     if(loading === true){  
       return <Loading />

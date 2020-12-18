@@ -10,10 +10,10 @@ const App: React.FC = () => {
   return (
   <div className='App'>
     <Switch>
-      <Route exact path='/' component={Home} />
-      <Route  exact path='/not-found' component={NotFound} />
-      <Route exact path='/:Patientid' component={Visits} />
-      <Route exact path='/physicians/:Physicianid' component={Physician} />
+      <Route exact path='/patients' component={Home} />
+      <Route exact path='/patients/not-found' component={NotFound} />
+      <Route exact path='/patients/:Patientid' component={Visits} />
+      <Route exact path='/patients/physicians/:Physicianid' component={Physician} />
     </Switch>
   </div>)
 }

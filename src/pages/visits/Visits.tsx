@@ -30,7 +30,7 @@ const Visits: React.FC = () => {
     }, [ferrumVisitssAPI])
 
     if(requestWorked === false){
-      return <Redirect to='/not-found' />
+      return <Redirect to='/patients/not-found' />
     } else{
       if(loading === true){  
         return <Loading />
@@ -44,7 +44,7 @@ const Visits: React.FC = () => {
         <div key={visit.id}>
         <p >{visit.id}, {visit.patientId}, {visit.physicianId}, 
         {visit.time}, {visit.location}, {visit.symptoms}, {visit.diagnosis} </p>
-        <p><Link to={`/physicians/${visit.physicianId}`}>Look at phycisian</Link></p>
+        <p><Link to={`/patients/physicians/${visit.physicianId}`}>Look at phycisian</Link></p>
         </div> 
         )}
     </div>)}

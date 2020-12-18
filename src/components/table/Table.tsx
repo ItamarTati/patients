@@ -36,7 +36,7 @@ const Table: React.FC = () => {
         <div>
         <p key = {patient.id}>{patient.id}, {patient.firstName}, {patient.lastName}, 
         {patient.email}, {patient.address}, {patient.phone}, {patient.since} </p>
-        <p><Link to={`/${patient.id}`}>Look at visits</Link></p>
+        <p><Link to={`/patients/${patient.id}`}>Look at visits</Link></p>
         </div>
         )}
         <Container/>
