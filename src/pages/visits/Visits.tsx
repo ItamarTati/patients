@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
+import Loading from '../../components/loading/Loading'
 interface Visit{  
     id: string,
     patientId: string,
@@ -15,19 +16,29 @@ interface id{
 
 const Visits: React.FC = () => {
   const id: id = useParams()
-  const [visits, setVisits] = useState<Visit[]>([]), 
+  const [visits, setVisits] = useState<Visit[]>([]),
+  [loading, setLoading] =  useState<boolean>(true),
+  [requestWorked, setRequestWorked] =  useState<boolean>(true),
   ferrumVisitssAPI: string = `https://us-central1-ferrum-dev.cloudfunctions.net/api/v1/patients/${id.Patientid}/visits`
     
   useEffect(() => {
     fetch(ferrumVisitssAPI)
     .then(response => response.json())
     .then(data => setVisits(data))
-    .catch((error) => console.log(error));
+    .then(data => setLoading(false))
+    .catch((error) => setRequestWorked(false));
     }, [ferrumVisitssAPI])
-  
+
+    if(requestWorked === false){
+      return <Redirect to='/not-found' />
+    } else{
+      if(loading === true){  
+        return <Loading />
+      }
+      else{
     return (
     <div >
-        <h1>Visits Page</h1>
+        <h1>Visits Page</h1>        
         {
         visits.map((visit) => 
         <div key={visit.id}>
@@ -36,8 +47,8 @@ const Visits: React.FC = () => {
         <p><Link to={`/physicians/${visit.physicianId}`}>Look at phycisian</Link></p>
         </div> 
         )}
-
-    </div>)
+    </div>)}
+    }
   }
 
 export default Visits
