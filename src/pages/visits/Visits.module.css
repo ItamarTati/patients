@@ -1,0 +1,21 @@
+.Visits{
+/* background-image: url('../../images/doctorvisit.jpg');
+background-size: cover;
+background-position: center; */
+background-color:  #0c333c;
+
+
+}
+.Patient{
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    border: 3px solid #f1f1f1;
+    font-size: 50px;
+}
+@media only screen and (min-width: 625px) {
+    .Patient{
+        width: 70%;
+    }
+
+}

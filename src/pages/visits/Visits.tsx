@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
-import Loading from '../../components/loading/Loading'
+import Loading from '../../components/loading/Loading';
+import classes from './Visits.module.css';
+
 interface Visit{  
     id: string,
     patientId: string,
@@ -39,14 +41,14 @@ const Visits: React.FC = () => {
       }
       else{
     return (
-    <div >
-        <h1>{patient.firstName} {patient.lastName}'s visits</h1>        
+    <div className={classes.Visits}>
+        <h1 className={classes.Patient}>{patient.firstName} {patient.lastName}'s visits</h1>        
         {
         visits.map((visit) => 
         <div key={visit.id}>
-        <p >{visit.id}, {visit.patientId}, {visit.physicianId}, 
+        <p >
         {visit.time}, {visit.location}, {visit.symptoms}, {visit.diagnosis} </p>
-        <p><Link to={`/patients/physicians/${visit.physicianId}`}>Look at phycisian</Link></p>
+        <p><Link to={`/patients/physicians/${visit.physicianId}`}>Here is the Physician</Link></p>
         </div> 
         )}
     </div>)}

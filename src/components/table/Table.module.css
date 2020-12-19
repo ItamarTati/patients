@@ -50,6 +50,7 @@ table {
         font-size: 0.5em;    
       }
       td {
+        padding: 0px;
 
         font-size: 0.3em;
       }
