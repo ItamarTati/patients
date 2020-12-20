@@ -3,6 +3,7 @@ import { useParams, Redirect } from 'react-router-dom';
 import Loading from '../../components/loading/Loading'
 import Button from '../../components/button/Button'
 import profile from '../../images/doctor.png'; 
+import classes from './Physcian.module.css';
 interface PhysicianInfo{  
     id: string
     firstName: string,
@@ -12,21 +13,6 @@ interface PhysicianInfo{
 interface PhysicianID{
   physicianID: string
 }
-let image = {
-  border: '4px solid black',
-  background: 'white',
-  borderRadius: '15px',
-  height: '400px',
-  width: '320px'
-};
-let background = {
-  background: 'linear-gradient(to right, #4facfe 0%, #00f2fe 100%)',
-  margin: '0 auto',
-  paddingTop: '100px',
-  height: '120vh'
-};
-
-
 
 const Physician: React.FC = () => {
   const physicianID: PhysicianID = useParams()
@@ -49,13 +35,18 @@ const Physician: React.FC = () => {
     }
     else{
   return (
-    <div key = {physician.id} style={background}>
-        <h4>Hey I'm DR. {physician.firstName} {physician.lastName}</h4>
-        <img src={profile} alt="Physician" style={image}/>
-        <p >You can call me at <a href={`tel:${physician.phone}`}>{physician.phone}</a></p>
-        <Button goHome={true}/>
-        <Button goHome={false}/>
-    </div>)}
+    <div>
+    <h2>Hey I'm DR. {physician.firstName} {physician.lastName}</h2>
+    <div key = {physician.id} className={classes.Card}>
+        <img src={profile} alt="Physician" />
+        <h3 >You can call me at <a href={`tel:${physician.phone}`}>{physician.phone}</a></h3>
+    </div>
+    <Button goHome={true}/>
+    <Button goHome={false}/>
+    </div>
+    
+    
+    )}
   }}
 
 export default Physician

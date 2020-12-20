@@ -36,7 +36,7 @@ const Visits: React.FC  = () => {
     .then(data => setLoading(false))
     .catch((error) => setRequestWorked(false));
     }, [ferrumVisitssAPI])
-
+    console.log(requestWorked)
     if(requestWorked === false){
       return <Redirect to='/patients/not-found' />
     } else{
