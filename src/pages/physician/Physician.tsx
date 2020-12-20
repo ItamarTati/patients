@@ -35,7 +35,7 @@ const Physician: React.FC = () => {
   return (
     <div key = {physician.id}>
         <h1>Physician Page</h1>
-        <p>{physician.id}, {physician.firstName}, {physician.lastName}, {physician.phone}</p>
+        <p>{physician.firstName}, {physician.lastName}, {physician.phone}</p>
 
     </div>)}
   }}

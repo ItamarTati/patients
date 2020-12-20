@@ -4,7 +4,6 @@ import Home from './pages/home/Home';
 import NotFound from './pages/not-found/notFound';
 import Physician from './pages/physician/Physician';
 import Visits from './pages/visits/Visits';
-import './App.css';
 
 const App: React.FC = () => {
   return (
