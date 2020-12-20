@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Loading.module.css';
 
-const  Loading: React.FC = () => {
+const Loading: React.FC = () => {
     return (
         <div className={classes.Loading}>
             <div className={classes.Loader} />
-            <p>Jusr Wait a Short Amount</p>
+            <p>Just Wait a Short Amount</p>
         </div>
     )
 }
