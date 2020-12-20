@@ -52,9 +52,9 @@ const Table: React.FC = () => {
       <tr key={patient.id}>
         <td>{patient.firstName}</td>
         <td>{patient.lastName}</td>
-        <td><a href={`mailto:${patient.address}`}>{patient.email}</a></td>
+        <td><a href={`mailto:${patient.email}`}>{patient.email}</a></td>
         <td>{patient.address}</td>
-        <td><a href={`tel:${patient.address}`}>{patient.phone}</a></td>
+        <td><a href={`tel:${patient.phone}`}>{patient.phone}</a></td>
         <td>{shortendDate(patient.since)}</td>
         <td><Link to={`/patients/${patient.id}/${patient.firstName}/${patient.lastName}`}>View Visits</Link></td>
       </tr>
