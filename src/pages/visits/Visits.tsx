@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, Redirect } from 'react-router-dom';
+import { Link, useParams, Redirect, useHistory } from 'react-router-dom';
 import Loading from '../../components/loading/Loading';
 import classes from './Visits.module.css';
 import shortendDate from '../../functions/shortendDate';
@@ -21,6 +21,7 @@ interface Patient{
 }
 
 const Visits: React.FC = () => {
+  const history = useHistory()
   const patient: Patient = useParams()
   const [visits, setVisits] = useState<Visit[]>([]),
   [loading, setLoading] =  useState<boolean>(true),
@@ -58,7 +59,10 @@ const Visits: React.FC = () => {
         </div> 
         )}
         </div>
-        <Button />
+        <div  onClick={() => history.goBack()}>
+        <Button  /> 
+        </div>
+
     
     </div>)}
     }
