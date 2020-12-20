@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
 import Loading from '../../components/loading/Loading';
 import classes from './Visits.module.css';
+import shortendDate from '../../functions/shortendDate';
+import Button from '../../components/button/Button'
 
 interface Visit{  
     id: string,
@@ -42,15 +44,22 @@ const Visits: React.FC = () => {
       else{
     return (
     <div className={classes.Visits}>
-        <h1 className={classes.Patient}>{patient.firstName} {patient.lastName}'s visits</h1>        
+        <h2 className={classes.Patient}>{patient.firstName} {patient.lastName}'s visits</h2>        
+        <div className={classes.Containers}>
         {
         visits.map((visit) => 
-        <div key={visit.id}>
-        <p >
-        {visit.time}, {visit.location}, {visit.symptoms}, {visit.diagnosis} </p>
-        <p><Link to={`/patients/physicians/${visit.physicianId}`}>Here is the Physician</Link></p>
+        <div key={visit.id} className={classes.Container}>
+        <h3>{shortendDate(visit.time)} at {visit.location}</h3>
+        <ul>
+          <li><strong>Symptoms:</strong> {visit.symptoms}</li>
+          <li><strong>Diagnosis:</strong> {visit.diagnosis} </li>
+          <li><Link to={`/patients/physicians/${visit.physicianId}`}>Click Here to see the Physician</Link></li>
+        </ul>
         </div> 
         )}
+        </div>
+        <Button />
+    
     </div>)}
     }
   }

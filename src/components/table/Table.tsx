@@ -32,7 +32,7 @@ const Table: React.FC = () => {
       else{
     return (
     <div className = {classes.Table}>
-        <h2>List of Users</h2>
+        <h2>List of Patients</h2>
         <table >
            <thead>
              <tr>
